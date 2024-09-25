@@ -1,0 +1,57 @@
+[build-system]
+requires = [
+  "hatchling",
+  "hatch-requirements-txt",
+  "hatch-fancy-pypi-readme>=22.5.0",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "gradio_seq_diff"
+version = "0.0.1"
+description = "Visualize Sequences and their Diffs Using MSAplot"
+readme = "README.md"
+license = "mit"
+requires-python = ">=3.6"
+authors = [{ name = "Joseph Tonic Pollack", email = "joseph.pollack@emle.eu" }]
+keywords = ["gradio-custom-component", "gradio-template-Image", "seq", "sequence", "multiple sequence alignment", "MSA", "seqlogo", "histogram", "consensus", "pyplot", "MSAplot", "annotation"]
+# Add dependencies here
+dependencies = ["gradio>=4.0,<5.0",
+    "numpy",
+    "pillow",
+    "matplotlib",
+    "pandas",
+    "seaborn",
+]
+classifiers = [
+  'Development Status :: 3 - Alpha',
+  'Operating System :: OS Independent',
+  'Programming Language :: Python :: 3',
+  'Programming Language :: Python :: 3 :: Only',
+  'Programming Language :: Python :: 3.8',
+  'Programming Language :: Python :: 3.9',
+  'Programming Language :: Python :: 3.10',
+  'Programming Language :: Python :: 3.11',
+  'Topic :: Scientific/Engineering',
+  'Topic :: Scientific/Engineering :: Artificial Intelligence',
+  'Topic :: Scientific/Engineering :: Visualization',
+]
+
+# The repository and space URLs are optional, but recommended.
+# Adding a repository URL will create a badge in the auto-generated README that links to the repository.
+# Adding a space URL will create a badge in the auto-generated README that links to the space.
+# This will make it easy for people to find your deployed demo or source code when they
+# encounter your project in the wild.
+
+# [project.urls]
+repository = "https://github.com/MedTonic/Gradio-Seq-Diff"
+# space = "your space url"
+
+[project.optional-dependencies]
+dev = ["build", "twine"]
+
+[tool.hatch.build]
+artifacts = ["/backend/gradio_seq_diff/templates", "*.pyi"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["/backend/gradio_seq_diff"]
