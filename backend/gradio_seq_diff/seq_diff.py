@@ -47,7 +47,7 @@ class seq_diff(Component):
         self,
         value: Optional[Union[str, PIL.Image.Image, np.ndarray, Callable]] = None,
         *,
-        msa: List[str],
+        msa: List[str] = [],
         seq_names: Optional[List[str]] = None,
         start: Optional[int] = None,
         end: Optional[int] = None,

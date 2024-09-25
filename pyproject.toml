@@ -8,15 +8,15 @@ build-backend = "hatchling.build"
 
 [project]
 name = "gradio_seq_diff"
-version = "0.0.1"
+version = "0.0.2"
 description = "Visualize Sequences and their Diffs Using MSAplot"
 readme = "README.md"
 license = "mit"
-requires-python = ">=3.6"
+requires-python = ">=3.9"
 authors = [{ name = "Joseph Tonic Pollack", email = "joseph.pollack@emle.eu" }]
 keywords = ["gradio-custom-component", "gradio-template-Image", "seq", "sequence", "multiple sequence alignment", "MSA", "seqlogo", "histogram", "consensus", "pyplot", "MSAplot", "annotation"]
 # Add dependencies here
-dependencies = ["gradio>=4.0,<5.0",
+dependencies = ["gradio>=5.0",
     "numpy",
     "pillow",
     "matplotlib",
